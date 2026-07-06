@@ -3,34 +3,33 @@ import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
   return (
-    <Tabs
-      screenOptions={{
-        headerShown: false,
-        tabBarActiveTintColor: '#2563eb',
-        tabBarInactiveTintColor: '#8e8e93',
-      }}
-    >
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <FontAwesome size={24} name="home" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="AddNew"
-        options={{
-          title: 'Add New',
-          tabBarIcon: ({ color }) => <FontAwesome size={24} name="plus-square" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="Profile"
-        options={{
-          title: 'Profile',
-          tabBarIcon: ({ color }) => <FontAwesome size={24} name="user" color={color} />,
-        }}
-      />
+    <Tabs screenOptions={{
+        headerShown: false
+    }}>
+        <Tabs.Screen name='index' 
+          options={{
+              tabBarLabel: 'Home',
+              tabBarIcon:({color,size})=>(
+                <FontAwesome name="home" size={size} color={color} />
+              )
+          }}
+        />
+        <Tabs.Screen name='AddNew'
+          options={{
+              tabBarLabel: 'AddNew',
+              tabBarIcon:({color,size})=>(
+                <FontAwesome name="plus-square" size={size} color={color} />
+              )
+          }}
+        />
+        <Tabs.Screen name='Profile'
+          options={{
+              tabBarLabel: 'Profile',
+              tabBarIcon:({color,size})=>(
+                <FontAwesome name="user" size={size} color={color} />
+              )
+          }}
+        />
     </Tabs>
-  );
+  )
 }
