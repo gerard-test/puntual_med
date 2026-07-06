@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function AddNewScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Add New</Text>
+      <Text style={styles.title}>AÑADIR NUEVO</Text>
     </View>
   );
 }
